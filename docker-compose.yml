@@ -1,14 +1,9 @@
 version: '3.1'
 
-volumes:
-  mongo_data:
-
 services:
   mongo:
     image: mongo
     restart: always
-    volumes:
-      - mongo_data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
